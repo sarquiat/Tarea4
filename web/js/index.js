@@ -1,6 +1,6 @@
 async function get() {
     var json;
-    let response = await fetch("http://localhost:9090/TareaErick/list", {
+    let response = await fetch("http://ec2-54-162-51-250.compute-1.amazonaws.com:8080/TareaErick/list", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -53,7 +53,7 @@ async function registrar() {
 }
 
 async function newLibro(t, a, p) {
-    let response = await fetch("http://localhost:9090/TareaErick/book", {
+    let response = await fetch("http://ec2-54-162-51-250.compute-1.amazonaws.com:8080/TareaErick/book", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -76,7 +76,7 @@ async function newLibro(t, a, p) {
 
 async function borrarLibro(e) {
     var id = e.id;
-    let response = await fetch("http://localhost:9090/TareaErick/book", {
+    let response = await fetch("http://ec2-54-162-51-250.compute-1.amazonaws.com:8080/TareaErick/book", {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
